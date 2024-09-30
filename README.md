@@ -20,7 +20,7 @@ This repository contains the Azure Functions App developed for the CLDV6212 modu
 ### Installation
 1. Clone the repository:
    
-   git clone https://github.com/yourusername/ST10272691_Functions_App.git
+   git clone https://github.com/Notz05/ST10272691-Functions-App-POE-PART-2.git
   
 2. Navigate to the project directory:
    
@@ -50,8 +50,8 @@ func start
    func azure functionapp publish <ST10272691-Functions-App>
   
 ## Links
-- [GitHub Repository]Part 1()
-- [GitHub Repository]Part 2()
+- [GitHub Repository]Part 1(https://github.com/Notz05/CLDV-SEMESTER-2-POE.git )
+- [GitHub Repository]Part 2(https://github.com/Notz05/ST10272691-Functions-App-POE-PART-2.git)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
