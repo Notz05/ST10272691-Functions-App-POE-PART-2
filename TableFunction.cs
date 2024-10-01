@@ -2,7 +2,7 @@ using Azure.Data.Tables;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
-using TimerInfo = Microsoft.Azure.WebJobs.TimerInfo;
+using TimerInfo = Microsoft.Azure.Functions.Worker.TimerInfo;
 using TimerTriggerAttribute = Microsoft.Azure.Functions.Worker.TimerTriggerAttribute;
 
 namespace ST10272691_Functions_App
@@ -21,19 +21,18 @@ namespace ST10272691_Functions_App
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
-            string connectionString = "DefaultEndpointsProtocol=https;AccountName=st10272691storage;AccountKey=r/j6vSozQ1ffM+pkg9llTNN34Wzp1UhTuU90S3umsIqWqqS5X1OiPD3sTZ0hSkSp6eGNrW/Wq0uM+AStvMr2Xw==;EndpointSuffix=core.windows.net";
+            string connectionString = "YourConnectionString"; // Best to store securely
             TableClient tableClient = new TableClient(connectionString, "YourTableName");
 
             // Add entity to the table
             var entity = new TableEntity("PartitionKey", "RowKey")
             {
-                { "FirstName", "John" },
-                { "LastName", "Doe" }
+                { "FirstName", "Kiirreenn" },
+                { "LastName", "Guunndduu" }
             };
 
             tableClient.AddEntity(entity);
             _logger.LogInformation("Entity added to Table Storage.");
         }
-
     }
 }

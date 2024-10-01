@@ -3,7 +3,6 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
-using System.Net.Http;
 using Microsoft.AspNetCore.Http;
 
 namespace ST10272691_Functions_App
@@ -39,7 +38,6 @@ namespace ST10272691_Functions_App
                         return response;
                     }
 
-                    // Process the request body and respond accordingly
                     response.WriteString($"Received your data: {requestBody}");
                 }
                 else

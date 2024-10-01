@@ -15,7 +15,7 @@ namespace ST10272691_Functions_App
         }
 
         [Function(nameof(Function))]
-        public async Task Run([BlobTrigger("samples-workitems/{name}", Connection = "DefaultEndpointsProtocol=https;AccountName=st10272691storage;AccountKey=r/j6vSozQ1ffM+pkg9llTNN34Wzp1UhTuU90S3umsIqWqqS5X1OiPD3sTZ0hSkSp6eGNrW/Wq0uM+AStvMr2Xw==;EndpointSuffix=core.windows.net")] Stream stream, string name)
+        public async Task Run([BlobTrigger("samples-workitems/{name}", Connection = "YourConnectionString")] Stream stream, string name)
         {
             using var blobStreamReader = new StreamReader(stream);
             var content = await blobStreamReader.ReadToEndAsync();
